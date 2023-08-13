@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-
+import ChatBox from '@/components/textBox'
+import Border from '@/components/border'
+import IronManArcReactor from '@/components/ArcReactor'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -13,8 +15,19 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.main} ${inter.className}`}>
-        <p>Made with ❤️ by PECACM</p>
+      <main className={`${styles.main} ${inter.className} relative`} style={{ overflow: 'hidden' }}>
+      {/* <div className='absolute text-white backdrop-blur-sm bg-white/30 w-full text-center h-10'>PECGPT</div> */}
+        <div
+          className="absolute inset-0 bg-center bg-cover"
+          style={{
+            backgroundImage: 'url("/2c.png")',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            animation: 'zoomAnimation 5s infinite alternate', // Adjust animation duration and options
+            zIndex: -1
+          }}
+        />
+        <ChatBox />
       </main>
     </>
   )
