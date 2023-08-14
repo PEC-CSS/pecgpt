@@ -64,7 +64,7 @@ const ChatBox = ({ handleResChange }) => {
                 onChange={(e) => {
                     setQuery(e.target.value);
                 }}
-                className="w-full p-2 border rounded-lg focus:outline-none shadow shadow-white glassmorphism text-white font-mono"
+                className="w-full p-2 border rounded-lg focus:outline-none shadow shadow-white glassmorphism text-md md:text-xl text-gray-400 font-mono"
                 placeholder="Type your message..."
                 maxLength={100}
             />
