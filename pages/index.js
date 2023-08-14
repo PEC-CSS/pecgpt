@@ -1,12 +1,17 @@
 import Head from 'next/head'
+import React,{useState} from 'react'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-import ChatBox from '@/components/textBox'
-import Border from '@/components/border'
-import IronManArcReactor from '@/components/ArcReactor'
+import ChatBox from '@/components/chatBox'
+import Card from '@/components/card'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const [response,setResponse] = useState("");
+  console.log(response,"Index")
+  const handleResChange = (newValue) => {
+    setResponse(newValue);
+  };
   return (
     <>
       <Head>
@@ -16,18 +21,21 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${inter.className} relative`} style={{ overflow: 'hidden' }}>
-      {/* <div className='absolute text-white backdrop-blur-sm bg-white/30 w-full text-center h-10'>PECGPT</div> */}
+        {/* Background */}
         <div
           className="absolute inset-0 bg-center bg-cover"
           style={{
-            backgroundImage: 'url("/2c.png")',
+            backgroundImage: 'url("/jf.gif")',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
-            animation: 'zoomAnimation 5s infinite alternate', // Adjust animation duration and options
             zIndex: -1
           }}
         />
-        <ChatBox />
+        {/* Content */}
+        <div className="h-screen p-2 w-full flex flex-col items-center ">
+          <ChatBox handleResChange={handleResChange} />
+          <Card response={response} />
+        </div>
       </main>
     </>
   )
