@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import { AiOutlineSend } from "react-icons/ai";
-import { BiDotsHorizontalRounded } from "react-icons/bi"
+import { BiDotsHorizontalRounded } from "react-icons/bi";
 
 const ChatBox = ({ handleResChange }) => {
-    const [query, setQuery] = useState('');
+    const [query, setQuery] = useState("");
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
-    const [gptResponse, setGptResponse] = useState('');
+    const [gptResponse, setGptResponse] = useState("");
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -29,12 +29,11 @@ const ChatBox = ({ handleResChange }) => {
                 headers: headersList,
             });
 
-            const res = await response.json();
-            setGptResponse("Welcome to pecgptWelcome to pecgptWelcome to pecgptWelcome to pecgptWelcome to pecgptWelcome to pecgptWelcome to pecgpt");
             if (!response.ok) {
                 throw new Error(`Error: ${res.error.message}`);
             }
 
+            const res = await response.json();
             setGptResponse(res.result);
         } catch (error) {
             setError(error.message);
@@ -44,15 +43,20 @@ const ChatBox = ({ handleResChange }) => {
     };
 
     useEffect(() => {
-        if (gptResponse !== '') {
+        if (gptResponse !== "") {
             handleResChange(gptResponse);
         }
     }, [gptResponse, handleResChange]);
 
     return (
-        <form className="m-4 w-3/4 flex items-center justify-center gap-1 relative" onSubmit={handleSubmit}>
+        <form
+            className="m-4 w-3/4 flex items-center justify-center gap-1 relative"
+            onSubmit={handleSubmit}
+        >
             {error && (
-                <p className="text-red-500 mt-2 absolute left-0 top-8 z-10 text-sm sm:text-lg">{error}</p>
+                <p className="text-red-500 mt-2 absolute left-0 top-8 z-10 text-sm sm:text-lg">
+                    {error}
+                </p>
             )}
             <input
                 type="text"
@@ -67,8 +71,8 @@ const ChatBox = ({ handleResChange }) => {
             {loading ? (
                 <BiDotsHorizontalRounded className="animate-pulse text-center text-2xl mt-2 text-white absolute right-2 z-10" />
             ) : (
-                <button type='submit' className="absolute right-2 z-10">
-                    <AiOutlineSend className='text-2xl text-white' />
+                <button type="submit" className="absolute right-2 z-10">
+                    <AiOutlineSend className="text-2xl text-white" />
                 </button>
             )}
         </form>
