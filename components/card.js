@@ -1,11 +1,15 @@
 import React from "react";
-import Typewriter from "typewriter-effect";
 import TypewriterEffect from "./typewriter";
 
-const Card = ({ response }) => {
+const Card = ({ response, loading }) => {
     return (
         <div className="glassmorphism w-3/4 min-h-[75vh] m-4 flex items-center justify-center text-md md:text-lg text-gray-400 text-center font-mono transition-transform transform overflow-y-scroll">
-            {response ? (
+            {loading ? (
+                <img
+                    src="/arc-reactor.gif"
+                    className="h-[100px] md:h-[200px]"
+                />
+            ) : response ? (
                 <p className="typewriter">
                     <TypewriterEffect text={response} />
                 </p>

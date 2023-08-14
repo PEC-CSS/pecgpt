@@ -33,7 +33,6 @@ export default async function (req, res) {
             temperature: 1,
         });
         console.log(completion.data.usage);
-        console.log(completion.data.choices[0].message.content);
         res.status(200).json({
             result: completion.data.choices[0].message.content,
         });

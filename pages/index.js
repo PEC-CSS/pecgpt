@@ -7,16 +7,20 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
     const [response, setResponse] = useState("");
+    const [loading, setLoading] = useState(false);
 
     const handleResChange = (newValue) => {
         setResponse(newValue);
-        console.log(response)
+    };
+
+    const handleLoadingChange = (loadingValue) => {
+        setLoading(loadingValue);
     };
 
     return (
         <>
             <Head>
-                <title>PECGPT</title>
+                <title>PecGPT</title>
                 <meta
                     name="description"
                     content="Hmm pretty much what you think it is.."
@@ -41,9 +45,24 @@ export default function Home() {
                         zIndex: -1,
                     }}
                 />
-                <div className="h-screen p-2 w-full flex flex-col items-center ">
-                    <ChatBox handleResChange={handleResChange} />
-                    <Card response={response} />
+                <div className="min-h-screen p-2 w-full flex flex-col items-center ">
+                    <ChatBox
+                        handleResChange={handleResChange}
+                        loading={loading}
+                        handleLoadingChange={handleLoadingChange}
+                    />
+                    <Card response={response} loading={loading} />
+                    <p className="text-white font-semibold">
+                        Made with ❤️ by{" "}
+                        <a
+                            className="font-bold"
+                            href="https://github.com/PEC-CSS"
+                            target="_blank"
+                            referrerPolicy="no-referrer"
+                        >
+                            PECACM
+                        </a>
+                    </p>
                 </div>
             </main>
         </>
