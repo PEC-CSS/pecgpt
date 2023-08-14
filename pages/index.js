@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Inter } from "next/font/google";
 import ChatBox from "@/components/chatBox";
 import Card from "@/components/card";
+import Header from "@/components/header";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -32,11 +33,11 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main
-                className={`${inter.className} relative`}
+                className={`${inter.className} relative scrollbar-hide`}
                 style={{ overflow: "hidden" }}
             >
                 <div
-                    className="absolute inset-0 bg-center bg-cover grayscale"
+                    className="absolute inset-0 bg-center bg-cover grayscale scrollbar-hide"
                     style={{
                         backgroundImage: 'url("/jf.gif")',
                         backgroundPosition: "center",
@@ -45,7 +46,8 @@ export default function Home() {
                         zIndex: -1,
                     }}
                 />
-                <div className="min-h-screen p-2 w-full flex flex-col items-center ">
+                <div className="min-h-screen p-2 w-full flex flex-col items-center scrollbar-hide">
+                    <Header />
                     <ChatBox
                         handleResChange={handleResChange}
                         loading={loading}

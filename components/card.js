@@ -3,7 +3,7 @@ import TypewriterEffect from "./typewriter";
 
 const Card = ({ response, loading }) => {
     return (
-        <div className="glassmorphism w-3/4 min-h-[75vh] m-4 flex items-center justify-center text-md md:text-lg text-gray-400 text-center font-mono transition-transform transform overflow-y-scroll">
+        <div className="glassmorphism w-3/4 min-h-[70vh] m-4 flex items-center justify-center text-md md:text-lg text-gray-400 text-center font-mono transition-transform transform overflow-y-scroll scrollbar-hide">
             {loading ? (
                 <img
                     src="/arc-reactor.gif"
