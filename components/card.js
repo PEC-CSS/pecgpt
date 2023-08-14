@@ -1,23 +1,18 @@
 import React from "react";
-import Typewriter from "typewriter-effect";
+import TypewriterEffect from "./typewriter";
 
-const Card = ({ response }) => {
+const Card = ({ response, loading }) => {
     return (
-        <div className="glassmorphism w-3/4 h-[75vh] m-4 flex items-center justify-center text-md md:text-2xl text-gray-400 text-center font-mono transition-transform transform hover:scale-105">
-            {response ? (
-                <Typewriter
-                    options={{
-                        delay: 40,
-                    }}
-                    onInit={(typewriter) => {
-                        typewriter
-                            .typeString(response)
-                            .callFunction(() => {
-                                console.log("String typed out!");
-                            })
-                            .start();
-                    }}
+        <div className="glassmorphism w-3/4 min-h-[70vh] m-4 flex items-center justify-center text-md md:text-lg text-gray-400 text-center font-mono transition-transform transform overflow-y-scroll scrollbar-hide">
+            {loading ? (
+                <img
+                    src="/arc-reactor.gif"
+                    className="h-[100px] md:h-[200px]"
                 />
+            ) : response ? (
+                <p className="typewriter">
+                    <TypewriterEffect text={response} />
+                </p>
             ) : (
                 <p>
                     Greeting Student! Welcome to PECGPT, an initiative by PEC
