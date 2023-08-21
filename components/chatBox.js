@@ -2,15 +2,14 @@ import React, { useState, useEffect } from "react";
 import { AiOutlineSend } from "react-icons/ai";
 import { BiDotsHorizontalRounded } from "react-icons/bi";
 
-const ChatBox = ({ handleResChange }) => {
+const ChatBox = ({ handleResChange, loading, handleLoadingChange }) => {
     const [query, setQuery] = useState("");
-    const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [gptResponse, setGptResponse] = useState("");
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setLoading(true);
+        handleLoadingChange(true);
         setError(null);
 
         let headersList = {
@@ -38,7 +37,7 @@ const ChatBox = ({ handleResChange }) => {
         } catch (error) {
             setError(error.message);
         } finally {
-            setLoading(false);
+            handleLoadingChange(false);
         }
     };
 
@@ -64,7 +63,7 @@ const ChatBox = ({ handleResChange }) => {
                 onChange={(e) => {
                     setQuery(e.target.value);
                 }}
-                className="w-full p-2 border rounded-lg focus:outline-none shadow shadow-white glassmorphism text-white font-mono"
+                className="w-full p-2 border rounded-lg focus:outline-none shadow shadow-white glassmorphism text-md md:text-xl text-gray-400 font-mono"
                 placeholder="Type your message..."
                 maxLength={100}
             />
