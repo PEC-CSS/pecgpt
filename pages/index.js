@@ -36,7 +36,6 @@ export default function Home() {
                         backgroundImage: 'url("/jf.gif")',
                         backgroundPosition: "center",
                         backgroundSize: "cover",
-                        animation: "zoomAnimation 5s infinite alternate",
                         zIndex: -1,
                     }}
                 />
