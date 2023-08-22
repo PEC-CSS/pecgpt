@@ -36,6 +36,7 @@ const ChatBox = ({ handleResChange, loading, handleLoadingChange }) => {
             setGptResponse(res.result);
         } catch (error) {
             setError(error.message);
+            setGptResponse("Some error occurred, try again later. Sorry for inconvenience, after all it is made by students :)")
         } finally {
             handleLoadingChange(false);
         }

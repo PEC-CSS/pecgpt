@@ -39,7 +39,7 @@ export default function Home() {
                 <div
                     className="absolute inset-0 bg-center bg-cover grayscale scrollbar-hide"
                     style={{
-                        backgroundImage: 'url("/jf.gif")',
+                        backgroundImage: 'url("/3.png")',
                         backgroundPosition: "center",
                         backgroundSize: "cover",
                         zIndex: -1,

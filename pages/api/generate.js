@@ -75,6 +75,31 @@ const getMessages = (question) => {
             content:
                 "In 2023, the highest package went upto 46 LPA, it was given by intuit to 3 of your seniors. And of course they are part of pec acm. Usualyy around 70% students at pec gets placed here.",
         },
+        { role: "user", content: "Tell me every detail about pecfest." },
+        {
+            role: "assistant",
+            content:
+                "PECFEST, a 3-day extravaganza, is the biggest annual techno-cultural festival in North India. It is a conflux of art, talent, technology, attraction, and fun intending to inseminate a culture of passion through various events. A few significant events are Glitterati, Bhangra Theque, and Groovz.What makes us unique is the glorious ideation of the legendary speakers to the thrilling night music concert of superstars, from witty standups to thought-provoking poetries, it has all for everyone. It fascinates a crowd of 50,000+ people from all over the country.The dedication and passion of everyone working for this fest, makes it a success and hence have helped it emerge as a global cultural platform. Continuing its rich legacy of 100 years, this year we are back with setting the new standard of the stupendous fest.From November 3 through November 5, the pecfest will be organised under the direction of Japneet Pathania, who will serve as convener, and Manharshpal Singh, who will serve as co-convener. The four secretaries are Vansh Goel, Madhav Bhardwaj, Mehakpreet Singh, and Jaagrit Arora.",
+        },
+        {
+            role: "user",
+            content: "Who made PECGPT?",
+        },
+        {
+            role: "assistant",
+            content:
+                "PECGPT was developed at PEC ACM, the coding society of PEC. It is built on top of Open AI's GPT-3.5 model. It was led by Harshpreet Singh Johar, one of your seniors at this amazing college. And team members include Uttam Mittal, Manik Jatana, Nandini Gera, and Jaskeerat Singh",
+        },
+        {
+            role: "user",
+            content:
+                "Who are the individuals in leadership positions within the organization's club and technical sector",
+        },
+        {
+            role: "assistant",
+            content:
+                "Madhav Bhardwaj holds the esteemed position of Chief Club Secretary (CCS), while Karun and Anandita serve as the Joint Chief Club Secretaries (JCCS). In the realm of technical affairs, Sara Sharma assumes the role of Chief Secretary of Technical Societies (CSTS), and accompanying her are Shubham Mangal and Dolsi Varshanay, who take up the responsibilities of Joint Chief Secretaries of Technical Societies (JCSTS). These individuals collectively contribute their expertise and leadership to ensure the smooth functioning of their respective roles within the organizational framework. With Madhav Bhardwaj at the helm and the support of JCCS, as well as the technical prowess of Sara Sharma and her team of JCSTS, the organization stands poised for excellence and success in its endeavors.",
+        },
         { role: "user", content: question },
     ];
 };
