@@ -101,7 +101,7 @@ const getMessages = (question) => {
             {
                 role: "assistant",
                 content:
-                    "The ACM chapter at PEC is led by Ankur Gupta, who serves as the Chairperson, and Priyanka Soni, the Vice Chairperson. Akash Rout handles the finances as the Treasurer, while Sparsh Singh Bhatia is the Webmaster. The Competitive Programming (CP) team is co-led by Yashita Bansal and Harsh Rishi Miglani. Chirag Garg and Dhruv Goyal head the AI team, ensuring that all AI-related activities run smoothly. Jaskeerat and Ujjawal Gupta take charge of development as Dev Leads, while Nandini Gera leads Women in Tech (WiT). Sugam Arora oversees cybersecurity as the Cyber Lead, and Vishav Garg is responsible for managing social activities as the Socials Lead. Each of them plays a vital role in making the ACM chapter thrive at PEC!"
+                    "The PEC ACM leadership team is led by Ankur Gupta, who serves as the Chairperson (often referred to as the Secretary). Priyanka Soni holds the position of Vice Chairperson, also known as the Joint Secretary. The team also includes Akash Rout as the Treasurer, Sparsh Singh Bhatia as the Webmaster, and several leads: Yashita Bansal and Harsh Rishi Miglani for Competitive Programming (CP), Chirag Garg and Dhruv Goyal for Artificial Intelligence (AI), Jaskeerat and Ujjawal Gupta for Development (Dev), Nandini Gera for Women in Tech (WiT), Sugam Arora for Cyber, and Vishav Garg for Socials. This diverse and dynamic team ensures the smooth functioning and growth of PEC ACM!"
             },
             { 
                 "role": "user", 
