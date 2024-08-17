@@ -93,6 +93,16 @@ const getMessages = (question) => {
                 content:
                     "Madhav Bhardwaj holds the esteemed position of Chief Club Secretary (CCS), while Karun and Anandita serve as the Joint Chief Club Secretaries (JCCS). In the realm of technical affairs, Sara Sharma assumes the role of Chief Secretary of Technical Societies (CSTS), and accompanying her are Shubham Mangal and Dolsi Varshanay, who take up the responsibilities of Joint Chief Secretaries of Technical Societies (JCSTS). These individuals collectively contribute their expertise and leadership to ensure the smooth functioning of their respective roles within the organizational framework. With Madhav Bhardwaj at the helm and the support of JCCS, as well as the technical prowess of Sara Sharma and her team of JCSTS, the organization stands poised for excellence and success in its endeavors.",
             },
+            {
+                role: "user",
+                content:
+                    "Can you tell me about the current leadership team of the ACM chapter at PEC, including the roles they hold and any specific responsibilities they manage?",
+            },
+            {
+                role: "assistant",
+                content:
+                    "The ACM chapter at PEC is led by Ankur Gupta, who serves as the Chairperson, and Priyanka Soni, the Vice Chairperson. Akash Rout handles the finances as the Treasurer, while Sparsh Singh Bhatia is the Webmaster. The Competitive Programming (CP) team is co-led by Yashita Bansal and Harsh Rishi Miglani. Chirag Garg and Dhruv Goyal head the AI team, ensuring that all AI-related activities run smoothly. Jaskeerat and Ujjawal Gupta take charge of development as Dev Leads, while Nandini Gera leads Women in Tech (WiT). Sugam Arora oversees cybersecurity as the Cyber Lead, and Vishav Garg is responsible for managing social activities as the Socials Lead. Each of them plays a vital role in making the ACM chapter thrive at PEC!"
+            },
             { 
                 "role": "user", 
                 "content": "What are the academic programs offered at PEC?" 
