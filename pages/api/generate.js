@@ -980,6 +980,54 @@ const getMessages = (question) => {
                 "role": "assistant", 
                 "content": "Currently, there are no provisions for cultural exchange programs with foreign students." 
             },
+            {
+                "role": "user",
+                "content": "How many hostels are there in Punjab Engineering College (PEC)?"
+            },
+            {
+                "role": "assistant",
+                "content": "There are a total of six hostels in PEC. Four of them are for boys: Shivalik Hostel, Himalaya Hostel, Kurukshetra Hostel, and Aravali Hostel. Two hostels are for girls: Kalpana Chawla Hostel and Vindhya Hostel."
+            },
+            {
+                "role": "user",
+                "content": "Who is in charge of the hostel management in PEC?"
+            },
+            {
+                "role": "assistant",
+                "content": "The Dean Student Affairs (DSA) is the overall in charge of all student activities at PEC, including hostel management. The Associate Dean Student Affairs-I specifically oversees all hostel organizations, assisted by Chief Wardens, Wardens, and student representatives."
+            },
+            {
+                "role": "user",
+                "content": "What facilities are provided in the hostels at PEC?"
+            },
+            {
+                "role": "assistant",
+                "content": "Hostels at PEC provide various facilities including Wi-Fi/internet, common rooms with recreational facilities such as newspapers, magazines, a common Television set, and equipment for indoor/outdoor games. There is also a washing facility available for students."
+            },
+            {
+                "role": "user",
+                "content": "How is the food quality maintained in PEC hostels?"
+            },
+            {
+                "role": "assistant",
+                "content": "PEC ensures that hostel messes provide simple but nutritious dining facilities. The quality of food and hygiene in the mess/canteen is regularly checked and maintained."
+            },
+            {
+                "role": "user",
+                "content": "Are students guaranteed hostel accommodation at PEC?"
+            },
+            {
+                "role": "assistant",
+                "content": "Hostel accommodation is provided to most students at PEC, depending on the availability of rooms in the hostels."
+            },
+            {
+                "role": "user",
+                "content": "Who looks after discipline in PEC hostels?"
+            },
+            {
+                "role": "assistant",
+                "content": "Discipline in each hostel at PEC is looked after by the Chief Warden and Wardens of the respective hostels."
+            },
     ];
 
     // Add the current question
